@@ -1,11 +1,45 @@
+# Secrets / private keys
 *.jks
 *.keystore
+*.p12
+*.pfx
 *.pem
 *.key
-.env*
+.env
+.env.*
+
+# mitmproxy private/local material
 .mitmproxy/
 mitmproxy-ca*
+
+# Diagnostic capture folders
+real_backend_capture/
+mock/real_backend_capture/
+
+# Android / proprietary binaries
 *.apk
+*.aab
+*.apks
+*.xapk
 *.obb
+
+# Large reverse-engineering workspaces / dumps
 ghidra.txt
+*.gpr
+*.rep
+*.gzf
+
+# Python
 __pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editors / OS / local scratch
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+local/
+tmp/
+temp/
