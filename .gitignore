@@ -23,6 +23,10 @@ mock/real_backend_capture/
 *.xapk
 *.obb
 
+# Local LAB build/signing artifacts
+dls21_lab_build_*/
+.dls21-lab.keystore
+
 # Large reverse-engineering workspaces / dumps
 ghidra.txt
 *.gpr

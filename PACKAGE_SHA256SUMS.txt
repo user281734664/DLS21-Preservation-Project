@@ -1,0 +1,8 @@
+bc3a1a1a06af5b60b5caf3f281a74e3cdb766bb06bb4dc12170c5b38becef10f  /mnt/data/DLS21-Preservation-GitHub-Final-Update/.gitignore
+14688a7586007de9e8283ed4647a248daf0e03bc631606469b31f795441880e7  /mnt/data/DLS21-Preservation-GitHub-Final-Update/PACKAGE_SHA256SUMS.txt
+4608afd0a1787a61c91205c51daf4a1e03fad82734e64f44c6f9bfc9c0fa0f91  /mnt/data/DLS21-Preservation-GitHub-Final-Update/README.md
+7854f98053525b5037f07dac19990670cd3e89df5d0b84fd9cee097d05a3ff61  /mnt/data/DLS21-Preservation-GitHub-Final-Update/UPLOAD_TO_GITHUB.md
+c9bda0384b7865b573c3d7bca7b3296717ba7c29fcb9e5db7a8bd97628b9c7aa  /mnt/data/DLS21-Preservation-GitHub-Final-Update/docs/APK_PATCHING.md
+71649f482fcb01d6c8619b07fd6aa736dd98f6687326b5c758d0d9379381f4a9  /mnt/data/DLS21-Preservation-GitHub-Final-Update/patches/network_security_config.xml
+8b9b7b03d88a495cbe9c66bfcdaa0e57078f1d5e36e462050a2fdbb0e3045903  /mnt/data/DLS21-Preservation-GitHub-Final-Update/tools/make_lab.py
+408764710620dd3dfa6689af52bec8e96feb64c6e8b0e579eb855e629db0ffed  /mnt/data/DLS21-Preservation-GitHub-Final-Update/tools/make_lab_windows.bat

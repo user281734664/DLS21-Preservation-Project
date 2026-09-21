@@ -145,9 +145,9 @@ record size = 0x46 bytes
 Known fields:
 
 ```text
-+0x00  Player ID                     [PROVEN]
-+0x02  baseline high-precision rating [PROVEN]
-+0x04  UNKNOWN                       [NEXT TARGET]
++0x00  Player ID                       [PROVEN]
++0x02  baseline high-precision rating  [PROVEN]
++0x04  UNKNOWN                         [NEXT TARGET]
 ```
 
 The rarity classifier receives:
@@ -169,6 +169,7 @@ See [CONTINUE_HERE.md](CONTINUE_HERE.md).
 - [docs/RARITY_SYSTEM.md](docs/RARITY_SYSTEM.md) — card-tier logic
 - [docs/PLAYERS_DAT_FORMAT.md](docs/PLAYERS_DAT_FORMAT.md) — reconstructed player record notes
 - [docs/GHIDRA_FINDINGS.md](docs/GHIDRA_FINDINGS.md) — native functions already identified
+- [docs/APK_PATCHING.md](docs/APK_PATCHING.md) — reproduce the LAB / USER-CA APK
 - [mock/README.md](mock/README.md) — real mock documentation
 - [proxy/MITMPROXY_SETUP.md](proxy/MITMPROXY_SETUP.md) — proxy setup
 - [proxy/TROUBLESHOOTING.md](proxy/TROUBLESHOOTING.md) — troubleshooting
@@ -185,6 +186,7 @@ Please preserve these labels in future contributions:
 
 Do not commit:
 
+- original or modified APKs
 - signing private keys
 - keystore passwords
 - mitmproxy private CA keys
@@ -194,6 +196,39 @@ Do not commit:
 - private diagnostic captures
 
 This repository documents the research and original tooling. Modified laboratory builds should always be clearly labeled as modified.
+
+## Reproducing the LAB / USER-CA APK
+
+The original DLS21 APK is **not distributed by this repository**.
+
+Researchers who already have their own compatible DLS21 v8.13 APK can generate the LAB build used by this preservation project:
+
+```bash
+python tools/make_lab.py DLS21_813_original.apk
+```
+
+On Windows, a convenience launcher is also included:
+
+```bat
+tools\make_lab_windows.bat "C:\path\to\DLS21_813_original.apk"
+```
+
+The builder:
+
+- verifies package `com.firsttouchgames.dls7`, v8.13 / versionCode 38;
+- enables `android:debuggable`;
+- trusts the Android user CA store for `api.ftpub.net`;
+- rebuilds and zipaligns the APK;
+- signs it with a local research key;
+- checks SHA-256 of `classes*.dex` and `libDLS21.so` before/after the rebuild.
+
+Default output:
+
+```text
+DLS21_813_USERCA_LAB_signed.apk
+```
+
+See [docs/APK_PATCHING.md](docs/APK_PATCHING.md) for the full process.
 
 ## How to run the mock
 
@@ -214,6 +249,58 @@ Then configure the Android device Wi-Fi proxy to:
 Host: <PC LAN IP>
 Port: 8080
 ```
+
+## ❤️ Support the project
+
+A significant amount of time has gone into reverse engineering, testing, documenting and preserving Dream League Soccer 2021.
+
+If this research has helped you and you would like to support the project, donations are completely optional.
+
+### 🇧🇷 Brazil — Pix
+
+Pix is Brazil's instant payment system.
+
+**Random Pix key:**
+
+```text
+10c43492-762d-4e9a-9356-6462989e32d3
+```
+
+### 🇺🇸 International — USD
+
+International donations in US dollars can be sent through the Banco Inter international banking channel below.
+
+**Intermediary Bank:** JP Morgan Chase N.A.  
+**SWIFT:** `CHASUS33`  
+**ABA / Routing:** `021000021`  
+**Account:** `360556937`
+
+**Beneficiary Bank:** Banco Inter S.A.  
+**SWIFT:** `ITEMBRSP`
+
+**Beneficiary:** Lucas Emanuel dos Santos Oliveira  
+**IBAN:** `BR3300416968000010231844590C1`
+
+**Intermediary bank address:** 270 Park Avenue, New York, NY 10017, United States  
+**Beneficiary bank address:** 1219 Barbacena Ave, Belo Horizonte, MG, 30190-924, Brazil
+
+### 🇪🇺 International — EUR
+
+International donations in euros can be sent through the Banco Inter international banking channel below.
+
+**Intermediary Bank:** J.P. Morgan AG  
+**SWIFT:** `CHASDEFX`
+
+**Beneficiary Bank:** Banco Inter S.A.  
+**SWIFT:** `ITEMBRSP`
+
+**Beneficiary:** Lucas Emanuel dos Santos Oliveira  
+**IBAN:** `BR3300416968000010231844590C1`
+
+**Intermediary bank address:** Taunustor 1, Frankfurt, Germany  
+**Beneficiary bank address:** 1219 Barbacena Ave, Belo Horizonte, MG, 30190-924, Brazil
+
+Donations do not provide exclusive files, private builds or additional access.
 
 ## Contributing
 
