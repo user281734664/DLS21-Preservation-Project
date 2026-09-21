@@ -278,7 +278,7 @@ International donations in US dollars can be sent through the Banco Inter intern
 **Beneficiary Bank:** Banco Inter S.A.  
 **SWIFT:** `ITEMBRSP`
 
-**Beneficiary:** Lucas Emanuel dos Santos Oliveira  
+**Beneficiary:** Lucas Oliveira  
 **IBAN:** `BR3300416968000010231844590C1`
 
 **Intermediary bank address:** 270 Park Avenue, New York, NY 10017, United States  
