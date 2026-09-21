@@ -294,7 +294,7 @@ International donations in euros can be sent through the Banco Inter internation
 **Beneficiary Bank:** Banco Inter S.A.  
 **SWIFT:** `ITEMBRSP`
 
-**Beneficiary:** Lucas Emanuel dos Santos Oliveira  
+**Beneficiary:** Lucas Oliveira  
 **IBAN:** `BR3300416968000010231844590C1`
 
 **Intermediary bank address:** Taunustor 1, Frankfurt, Germany  
