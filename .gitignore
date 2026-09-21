@@ -1,0 +1,11 @@
+*.jks
+*.keystore
+*.pem
+*.key
+.env*
+.mitmproxy/
+mitmproxy-ca*
+*.apk
+*.obb
+ghidra.txt
+__pycache__/
